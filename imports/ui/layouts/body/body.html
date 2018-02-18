@@ -1,0 +1,13 @@
+<template name="App_body">
+    {{> navigation}}
+  <main class="container">
+    {{> loginButtons}}
+      {{#momentum plugin="fade"}}
+      {{#if Template.subscriptionsReady}}
+        {{> Template.dynamic template=main}}
+      {{else}}
+        {{> App_loading}}
+      {{/if}}
+    {{/momentum}}
+  </main>
+</template>
