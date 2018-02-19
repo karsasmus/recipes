@@ -10,6 +10,7 @@ Template.info.helpers({
   links() {
     return Links.find({});
   },
+  // Ist ein User angemeldet?
   isUser() {
     return Meteor.user();
   },
