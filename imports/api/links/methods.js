@@ -10,9 +10,8 @@ Meteor.methods({
     check(title, String);
 
     return Links.insert({
-      url,
       title,
-      createdAt: new Date(),
+      url
     });
   },
 });

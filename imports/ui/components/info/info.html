@@ -3,6 +3,7 @@
   <h2>Learn Meteor!</h2>
   <ul>
     <li>
+      {{#if isUser }}
       <form class="row info-link-add">
           <div class="input-field col s6">
         <input type="text" name="title" placeholder="Title" required>
@@ -16,6 +17,7 @@
                 <i class="material-icons right">send</i>
               </button>
       </form>
+      {{/if}}
     </li>
     {{#each links}}
       <li><a href="{{url}}" target="_blank">{{title}}</a></li>

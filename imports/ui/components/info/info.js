@@ -10,6 +10,9 @@ Template.info.helpers({
   links() {
     return Links.find({});
   },
+  isUser() {
+    return Meteor.user();
+  },
 });
 
 Template.info.events({
@@ -23,6 +26,7 @@ Template.info.events({
     Meteor.call('links.insert', title.value, url.value, (error) => {
       if (error) {
         alert(error.error);
+        console.log(error);
       } else {
         title.value = '';
         url.value = '';
